@@ -1,0 +1,278 @@
+:root {
+  --forest-green: #1B4D3E;
+  --light-green: #E8F5E9;
+  --dark-text: #2E2E2E;
+  --body-font: 'Segoe UI', Tahoma, sans-serif;
+}
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: var(--light-green);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+header {
+  background-color: var(--forest-green);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: var(--light-green);
+}
+.title-page h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+.intro-text p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+/* Updated link buttons to forest-green for visibility */
+.links a {
+  margin: 0 10px;
+  color: var(--forest-green);
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid var(--forest-green);
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+  background-color: white;
+}
+.links a:hover {
+  background-color: var(--forest-green);
+  color: white;
+}
+/* Gallery as a responsive grid, not flex */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+/* Let each image fill its cell without forcing identical heights */
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--forest-green);
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Remove default link styling inside descriptions */
+.description a,
+.awards a,
+.skills a,
+.project-content a {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--body-font);
+  color: var(--forest-green);
+  margin-top: 1rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+/* ————————————————————————————————
+   Featured Projects: equal-height cards
+   ———————————————————————————————— */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: stretch; /* force all cards to match the tallest */
+}
+
+.project-card-link {
+  /* each card gets a min-width then grows to fill the row */
+  flex: 1 1 280px;
+  display: flex;       /* so its child (.project-card) can stretch */
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;             /* fill the full height of its link wrapper */
+  background: var(--light-green);
+  border: 2px solid var(--forest-green);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 325px;       /* keep your fixed image height */
+  object-fit: cover;
+  flex-shrink: 0;       /* don’t let the image shrink */
+}
+
+.project-content {
+  flex: 1;              /* take up all remaining space */
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.project-content p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  /* Optional: if you want to prevent super-long text from stretching
+     beyond the image area, you could add
+     overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 3;      ← lines of text to show
+     -webkit-box-orient: vertical;
+  */
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+.project-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.project-content {
+  padding: 18px;
+}
+.project-content h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+.project-content p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.description, .awards, .skills {
+  background: #fff;
+  border: 1px solid var(--forest-green);
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 30px;
+}
+.description p, .awards li, .skills p {
+  font-size: 1rem;
+}
+.awards ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+.skills p {
+  margin: 0;
+}
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+/* ————————————————————————————————
+   Override link styling in project cards
+   ———————————————————————————————— */
+.project-card-link,
+.project-card-link * {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* If you want a hover effect, you can add something like: */
+.project-card-link:hover {
+  /* for example: slightly lift the card or change its border */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+/* Highlight links in description, awards & skills */
+.description a,
+.awards a,
+.skills a {
+  color: var(--forest-green);           /* match your theme */
+  text-decoration: none;                /* remove underline */
+  background-color: rgba(30, 70, 50, 0.1); /* light green highlight */
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.description a:hover,
+.awards a:hover,
+.skills a:hover {
+  background-color: rgba(30, 70, 50, 0.2); /* darker on hover */
+}
+/* Profile image fix */
+.intro-text img {
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Center link buttons */
+.links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links a {
+  background-color: var(--forest-green);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.links a:hover {
+  background-color: #0a6b3d; /* Slightly darker green */
+}
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 4px solid var(--forest-green);
+  object-fit: cover;
+  object-position: center top;
+}
+/* ————————————————————————————————
+   Make the intro section flex-height match the photo
+———————————————————————————————— */
+

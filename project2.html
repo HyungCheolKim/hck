@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CERVOS • HyungCheol Kim</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Gallery as a grid: 2 columns, 3rd image spans both */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: 325px;
+      border: 2px solid var(--forest-green);
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    /* Third image becomes full-width below the two */
+    .gallery img:nth-child(3) {
+      grid-column: 1 / -1;
+    }
+
+    .description,
+    .awards,
+    .skills {
+      background: #fff;
+      border: 1px solid var(--forest-green);
+      border-radius: 6px;
+      padding: 20px;
+      line-height: 1.6;
+      color: var(--dark-text);
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header style="background-color: var(--forest-green); padding:12px;">
+    <a href="projects.html"
+       style="color:white; text-decoration:none; font-weight:bold; margin-left:20px;">
+      ← Back to Projects
+    </a>
+  </header>
+
+  <main style="max-width:1200px; margin:40px auto; padding: 0 20px;">
+    <h1 style="color: var(--forest-green);">CERVOS</h1>
+
+    <!-- Three-image gallery: 1 & 2 on top row, 3 full-width below -->
+    <div class="gallery">
+      <img src="images/CERVOS1.jpg" alt="Step 1">
+      <img src="images/CERVOS2.jpg" alt="Step 2">
+      <img src="images/CERVOS3.jpg" alt="Step 3">
+    </div>
+
+    <!-- Description area -->
+    <section class="description">
+      <h2>Description</h2>
+      <p>At CERVOS, our goal is to address cervical incompetence, a condition where the cervix shortens prematurely, increasing the risk of miscarriage and preterm birth. Currently, this condition is managed through invasive surgical procedures and physical pessary devices. However, these interventions often result in discomfort, complications, and frequent clinical visits.</p>
+      <p>To address these challenges, our team is developing a self-adjusting inflatable pessary device. This innovative design adapts to patient needs, significantly reducing the need for doctor visits and enhancing patient comfort.
+</p>
+      <p>To efficiently manage our project budget of $700, I implemented ANSYS Finite Element Analysis (FEA) modeling to optimize our silicone testing processes. With micropumps and drivers costing upwards of $400, it is crucial to minimize costs. By simulating how various silicone materials deform under internal and external pressures, I significantly reduced the number of physical tests required.</p>
+      <p>Additionally, our device requires a hollow core, this is achieved through a two part molding technique. To achieve the hollow core, I developed a sacrificial wax core that is removed after molding. Through this method, we were able to manufacture consistent quality prototype devices.
+      </p>
+      <p>Moving forward, the next steps involve incorporating contact modeling into our simulations. This will enable us to predict the device’s performance under realistic usage conditions. These tests will help to further decrease the overall project costs and expedite our development process.
+</p>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="awards">
+      <h2>Awards &amp; Recognition</h2>
+      <ul>
+        <li>
+          <a href="CERVOS_2025_UROP_Poster.pdf" target="_blank">
+            UROP Grant Recipient 2023–2025
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <h2>Skills</h2>
+      <p>Silicone Molding, Injection Molding, ANSYS (FEA), SolidWorks</p>
+    </section>
+  </main>
+
+  <footer style="background-color: var(--forest-green); color:white; text-align:center; padding:20px;">
+    <p>© 2025 HyungCheol Kim. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+

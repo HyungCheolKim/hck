@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Guidance Glasses • HyungCheol Kim</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Gallery as a grid: 2 columns on top, 3rd image full-width below */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border: 2px solid var(--forest-green);
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    .gallery img:nth-child(3) {
+      grid-column: 1 / -1;
+    }
+
+    .description,
+    .skills {
+      background: #fff;
+      border: 1px solid var(--forest-green);
+      border-radius: 6px;
+      padding: 20px;
+      line-height: 1.6;
+      color: var(--dark-text);
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header style="background-color: var(--forest-green); padding:12px;">
+    <a href="projects.html"
+       style="color:white; text-decoration:none; font-weight:bold; margin-left:20px;">
+      ← Back to Projects
+    </a>
+  </header>
+
+  <main style="max-width:1200px; margin:40px auto; padding: 0 20px;">
+    <h1 style="color: var(--forest-green);">Guidance Glasses</h1>
+
+    <!-- Three-image gallery: first two side-by-side, third full-width -->
+    <div class="gallery">
+      <img src="images/GUIDE3.jpg" alt="Guidance Glasses – View 1">
+      <img src="images/GUIDE2.jpg" alt="Guidance Glasses – View 2">
+      <img src="images/GUIDE1.jpg" alt="Guidance Glasses – View 3">
+    </div>
+
+    <!-- Description area -->
+    <section class="description">
+      <h2>Description</h2>
+      <p>
+        Guidance Glasses was developed to aid visually impaired individuals in navigating urban 
+        environments safely. Our device integrates a camera, ultrasonic sensor, microphone,
+         and haptic feedback to alert users about their surroundings.</p>
+      <p>
+        As hardware lead, I designed and prototyped the smart glasses
+         housing to integrate all electronics. Through five iterative frame
+          designs, I evenly distributed the weight of the components to balance the left and right frames.
+          </p>
+      <p>
+        I actively coordinated and worked with a multidisciplinary team
+         of five engineers, ensuring clear communication to accelerate development. By using SolidWorks, I was able to rapidly prototype the device for the team to test the device.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <h2>Skills</h2>
+      <p>SolidWorks, 3D Printing, GD&amp;T, Rapid Prototyping</p>
+    </section>
+  </main>
+
+  <footer style="background-color: var(--forest-green); color:white; text-align:center; padding:20px;">
+    <p>© 2025 HyungCheol Kim. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>BitHacks 2025 • HyungCheol Kim</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery {
+      display: flex;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .gallery img {
+      width: calc(33.333% - 10.666px);
+      border: 2px solid var(--forest-green);
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    .description, .awards, .skills {
+      background: #fff;
+      border: 1px solid var(--forest-green);
+      border-radius: 6px;
+      padding: 20px;
+      line-height: 1.6;
+      color: var(--dark-text);
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header style="background-color: var(--forest-green); padding:12px;">
+    <a href="projects.html" style="color:white; text-decoration:none; font-weight:bold; margin-left:20px;">
+      ← Back to Projects
+    </a>
+  </header>
+
+  <main style="max-width:1200px; margin:40px auto; padding: 0 20px;">
+    <h1 style="color: var(--forest-green);">Emotional Support Pet</h1>
+
+    <!-- Three-image gallery -->
+    <div class="gallery">
+      <img src="images/BITHACKS1.jpg" alt="Step 1">
+      <img src="images/BITHACKS2.jpg" alt="Step 2">
+      <img src="images/BITHACKS3.jpg" alt="Step 3">
+    </div>
+
+    <!-- Description area -->
+    <section class="description">
+      <h2>Description</h2>
+      <p>At BITHACKS UCI 2025, we developed ESP (Emotional Supported Pet) to provide emotional companionship for individuals unable to own traditional pets due to allergies, time constraints, or restrictive housing rules. ESP helps combat loneliness and stress by responding to the user’s movement and touch, and expresses emotions through lights, motions, and sound.</p>
+
+      <p>As the hardware lead, I designed  and constructed the device housing. Due to the 36 hour deadline, I was limited to a single 3D print. By verifying proper dimensions and optimizing print settings, I was able to successfully print the full device. However, minor adjustments with hot glue, soldering, and tape were necessary to ensure full functionality.</p>
+<p>The complete device integrated load sensors to detect touch, RGB light bulb to display different emotions. In addition, the device tracked user movement through the camera and adjusted accordingly on two axes through two servo motors.
+</p>
+    </section>
+
+  
+
+    <!-- Skills -->
+    <section class="skills">
+      <h2>Skills</h2>
+      <p>Rapid Prototyping, Soldering, SolidWorks, 3D printing</p>
+    </section>
+    </main>
+ <footer style="background-color: var(--forest-green); color:white; text-align:center; padding:20px;">
+    <p>© 2025 HyungCheol Kim. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

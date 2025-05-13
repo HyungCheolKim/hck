@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>REACH Senior Design • HyungCheol Kim</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery {
+      display: flex;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .gallery img {
+      width: calc(33.3333% - 10.666px);
+      border: 2px solid var(--forest-green);
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    .description, .awards, .skills {
+      background: #fff;
+      border: 1px solid var(--forest-green);
+      border-radius: 6px;
+      padding: 20px;
+      line-height: 1.6;
+      color: var(--dark-text);
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header style="background-color: var(--forest-green); padding:12px;">
+    <a href="projects.html" style="color:white; text-decoration:none; font-weight:bold; margin-left:20px;">
+      ← Back to Projects
+    </a>
+  </header>
+
+  <main style="max-width:1200px; margin:40px auto; padding: 0 20px;">
+    <h1 style="color: var(--forest-green);">REACH Senior Design</h1>
+
+    <!-- Three-image gallery -->
+    <div class="gallery">
+      <img src="images/REACH1.jpg" alt="Step 1">
+      <img src="images/REACH2.jpg" alt="Step 2">
+      <img src="images/REACH3.jpg" alt="Step 3">
+    </div>
+
+    <!-- Description area -->
+    <section class="description">
+      <h2>Description</h2>
+      <p>At REACH (Rehabilitative EMG-Assisted Control for Health), we are leveraging electromyography (EMG) and functional electrical stimulation (FES) to aid stroke patients experiencing upper limb impairments.</p>
+      <p>Our team collaborated with the ICS department to develop our ML model to categorize hand gestures through EMG signal analysis.
+</p>
+      <p>As the design lead, I created and prototyped the initial CAD design of our device using SolidWorks. Recognizing our team’s limited experience in developing custom functional electrical stimulation units, we incorporated a commercially available FES device, to deliver custom stimulation based on patient needs.
+</p>
+      <p>I helped integrate the FES unit by engineering a control system using two stepper motors, allowing precise adjustment of stimulation intensity across two channels. Additionally, I integrated four relays to control the frequency, wavelength, and stimulation durations through a Raspberry Pi 5.
+</p>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="awards">
+      <h2>Awards &amp; Recognition</h2>
+      <ul>
+        <li><a href="https://escholarship.org/uc/item/8x03c4s2#main" target="_blank">Dean's Design Choice Award, 2025</a></li>
+        <li>SZNVC Semi Finalist</li>
+        <li>Beall Buttersworth Competition</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <h2>Skills</h2>
+      <p>SolidWorks, Circuit Design, Arduino IDE, Soldering</p>
+    </section>
+    </main>
+ <footer style="background-color: var(--forest-green); color:white; text-align:center; padding:20px;">
+    <p>© 2025 HyungCheol Kim. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
